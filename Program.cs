@@ -10,19 +10,15 @@ namespace ConsoleApp35
     {
         static void Main(string[] args)
         {
-            //1 В массиве записана масса каждого из n предметов, загружаемых в автомбиль. Определить общую массу грyза.
-            int[] mas = new int[10];
-            Random rnd = new Random();
-            int sum = 0;
-            for (int i = 0; i < mas.Length; i++)
-            {
-                mas[i] = rnd.Next(1, 10);
-                sum += mas[i];
-                Console.Write(mas[i] + " ");
-            }
-            Console.WriteLine();
-            Console.WriteLine(sum);
-            Console.ReadKey();
+            // 2.Известен рост каждого студента 212 группы.Найти средний рост студентов.
+            int[] array = { 160, 165, 173, 164, 185 };
+            int summ = 0;
+            for (int i = 0; i < array.Length; i++)
+                summ += array[i];
+            int mid = summ / array.Length;
+            Console.WriteLine($"средний рост студента 212 группы будет {mid}");
+            Console.ReadLine();
+
         }
     }
 }
