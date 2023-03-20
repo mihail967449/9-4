@@ -10,17 +10,18 @@ namespace ConsoleApp35
     {
         static void Main(string[] args)
         {
-
-            //3.Определить количество отрицательных, положительных и нулевых элементов одномерного массива, заполненного случайным образом 15 целыми числами в интервале[-10; 10]. 
-
-            Random random = new Random();
-            Console.Write("Размер массива: ");
-            int[] array = Enumerable.Repeat(1, int.Parse(Console.ReadLine())).Select(x => random.Next(-10, 2)).ToArray();
-            Console.WriteLine(string.Join(" ", array));
-            Console.WriteLine($"Количество отрицательных: " + array.Count(x => x < 0));
-            Console.WriteLine($"Количество положительных: " + array.Count(x => x > 0));
+            // 4 Подсчитать количество четных элементов в одномерном массиве, заполненном с использованием явной инициализации.
+            short[] kol = { 2, 9, 5, 90, 12, 56, 76, 17, 81, 22 };
+            short che = 0;
+            foreach(short num in kol)
+            {
+                if (num % 2 == 0)
+                {
+                    che++;
+                }
+            }
+            Console.WriteLine($"Кол-во четных элементов = {che}");
             Console.ReadLine();
-
         }
     }
 }
