@@ -10,13 +10,15 @@ namespace ConsoleApp35
     {
         static void Main(string[] args)
         {
-            // 2.Известен рост каждого студента 212 группы.Найти средний рост студентов.
-            int[] array = { 160, 165, 173, 164, 185 };
-            int summ = 0;
-            for (int i = 0; i < array.Length; i++)
-                summ += array[i];
-            int mid = summ / array.Length;
-            Console.WriteLine($"средний рост студента 212 группы будет {mid}");
+
+            //3.Определить количество отрицательных, положительных и нулевых элементов одномерного массива, заполненного случайным образом 15 целыми числами в интервале[-10; 10]. 
+
+            Random random = new Random();
+            Console.Write("Размер массива: ");
+            int[] array = Enumerable.Repeat(1, int.Parse(Console.ReadLine())).Select(x => random.Next(-10, 2)).ToArray();
+            Console.WriteLine(string.Join(" ", array));
+            Console.WriteLine($"Количество отрицательных: " + array.Count(x => x < 0));
+            Console.WriteLine($"Количество положительных: " + array.Count(x => x > 0));
             Console.ReadLine();
 
         }
